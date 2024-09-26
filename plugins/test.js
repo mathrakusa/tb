@@ -2,8 +2,8 @@ const {cmd , commands} = require('../command')
 
 cmd({
     pattern: "test",
-    desc: "test the bot",
-    category: "test",
+    desc: "menu the bot",
+    category: "menu",
     react: "📜",
     filename: __filename
 },
@@ -117,7 +117,7 @@ History easy tags ☘❤
 Created by, 
  Admin Saranya ✨ 
 
-#Copied
+Copied`
 
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/24ee445077f52ea56c4f3.jpg`},caption:dec},{quoted:mek});
 
