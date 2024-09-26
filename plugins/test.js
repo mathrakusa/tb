@@ -13,7 +13,7 @@ try{
 const voice = {
     menu: 'media/AUD-20240904-WA0432.mp3'
 }
-let dec = `*👋 Hello ${pushname}*
+let dec = ` > ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋᴀᴡᴅʜɪᴛʜᴀ ɴɪʀᴍᴀʟッ
 
 History easy tags ☘❤
 *__ ශ්‍රී ලංකාවේ ජාතික පුනරුදය __*
@@ -117,7 +117,7 @@ History easy tags ☘❤
 Created by, 
  Kawdhitha nIrmal ✨ 
 
-> Kawdhitha`
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋᴀᴡᴅʜɪᴛʜᴀ ɴɪʀᴍᴀʟッ`
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/36078e0c0f65db06b7fca.jpg`},caption:dec},{quoted:mek});
 
 }catch(e){
