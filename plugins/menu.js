@@ -15,12 +15,11 @@ const voice = {
 }
 let dec = `*👋 Hello ${pushname}*
 
-*Note Bot*(Testing)
+*Note Bot[Testing]*
 
-*MATHS   = [.ithihase]*
-*HISTORY =[.H]*
+Type *[.ithihase]*
 
-> Kawdhitha NIrmal`
+> Kawdhitha`
 }catch(e){
 console.log(e)
 reply(`${e}`)
