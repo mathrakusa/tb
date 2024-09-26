@@ -18,20 +18,11 @@ let dec = `*👋 Hello ${pushname}*
 *Note Bot*(Testing)
 
 *MATHS   = [.M]*
-*HISTORY =[.H]*
+*HISTORY =[.ithihase]*
 
 > Kawdhitha NIrmal`
 
-const pdfMessage = {
-    document: { 
-        url: 'https://pastpapers.wiki/download/27796/20232024-o-l/73177/20232024-ol-history-past-paper-and-answers.pdf'
-    },
-    mimetype: 'application/pdf',
-    caption: 'Here is the past paper and answers PDF',
-    quoted: mek
-};
-
-await conn.sendMessage(from, pdfMessage);
+await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/c4fb65879b2c1690691f8.jpg},caption:dec},{quoted:mek});
 
 }catch(e){
 console.log(e)
