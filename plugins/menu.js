@@ -17,13 +17,10 @@ let dec = `*👋 Hello ${pushname}*
 
 *Note Bot*(Testing)
 
-*MATHS   = [.M]*
-*HISTORY =[.ithihase]*
+*MATHS   = [.ithihase]*
+*HISTORY =[.H]*
 
 > Kawdhitha NIrmal`
-
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/c4fb65879b2c1690691f8.jpg},caption:dec},{quoted:mek});
-
 }catch(e){
 console.log(e)
 reply(`${e}`)
