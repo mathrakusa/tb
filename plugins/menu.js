@@ -15,11 +15,21 @@ const voice = {
 }
 let dec = `*👋 Hello ${pushname}*
 
-*Note Bot[Testing]*
+*╭───────────◉◉►*
+*│Hey, I'm Not Bot/test, Created By*
+*│ > Kawdhitha✨🍂*
+*│*
+*│I'm always here for help you.😇 Love │you forever ♥️*
+*╰───────────◉◉►*
 
-Type *[.ithihase]*
+*╭───────────◎◎►*
+*│ Find Notes*
+*│ ─────────*
+*│►.ithihase*
+*╰───────────◎◎►*
+*©Qᴜᴇᴇɴ ᴋʏʟɪᴇ-ᴍᴅ ʙʏ Kawdhitha Nirmalッ*`
+await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/c4fb65879b2c1690691f8.jpg`},caption:dec},{quoted:mek});
 
-> Kawdhitha`
 }catch(e){
 console.log(e)
 reply(`${e}`)
