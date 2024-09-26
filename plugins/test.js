@@ -118,7 +118,7 @@ Created by,
  Kawdhitha nIrmal ✨ 
 
 > Kawdhitha`
-await conn.sendMessage(from,{image:{url: ``},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/36078e0c0f65db06b7fca.jpg`},caption:dec},{quoted:mek});
 
 }catch(e){
 console.log(e)
