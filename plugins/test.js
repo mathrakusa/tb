@@ -115,9 +115,9 @@ History easy tags ☘❤
 〰〰〰〰〰〰〰〰〰〰〰
 
 Created by, 
- Admin Saranya ✨ 
+ Kawdhitha nIrmal ✨ 
 
-Copied`
+> Kawdhitha`
 
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/c4fb65879b2c1690691f8.jpg`},caption:dec},{quoted:mek});
 
