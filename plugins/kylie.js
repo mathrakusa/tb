@@ -12,6 +12,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 let dec = `❮❮ MY KYLIE WALLPAPER 👾💗 ❯❯`
+await conn.sendMessage(from,{pdf:{url: `https://pastpapers.wiki/download/27796/20232024-o-l/73177/20232024-ol-history-past-paper-and-answers.pdf`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/eed77eda52d1b6c5b7f7d.jpg`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/9c65bd8725a13d45eb055.jpg`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/95c29c97cb944b6dea36e.jpg`},caption:dec},{quoted:mek});
