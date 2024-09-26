@@ -2,7 +2,7 @@ const {cmd , commands} = require('../command')
 
 cmd({
     pattern: "test",
-    desc: "menu the bot",
+    desc: "test the bot",
     category: "test",
     react: "📜",
     filename: __filename
