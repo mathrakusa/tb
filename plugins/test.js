@@ -4,7 +4,7 @@ cmd({
     pattern: "ithihase",
     desc: "menu the bot",
     category: "menu",
-    react: "📜",
+    react: "😁",
     filename: __filename
 },
 
