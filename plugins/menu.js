@@ -117,7 +117,8 @@ History easy tags ☘❤
 Created by, 
  Admin Saranya ✨ 
 
-#Copied
+Copied`
+
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/24ee445077f52ea56c4f3.jpg`},caption:dec},{quoted:mek});
 
 }catch(e){
