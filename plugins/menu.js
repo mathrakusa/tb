@@ -31,8 +31,16 @@ let dec = `*👋 Hello ${pushname}*
 *│*
 *╰───────────◎◎►*
 *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋᴀᴡᴅʜɪᴛʜᴀ ɴɪʀᴍᴀʟッ*`
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/c4fb65879b2c1690691f8.jpg`},caption:dec},{quoted:mek});
+// PDF URL
+const pdfUrl = 'https://pastpapers.wiki/download/23693/20222023-o-l/72430/2020-ol-tamil-language-and-literature-past-paper-2.pdf';
 
+// Send the PDF with a caption
+await conn.sendMessage(from, {
+    document: { url: pdfUrl },  // The PDF file URL
+    mimetype: 'application/pdf', // MIME type for PDF
+    fileName: 'O-Level Tamil Language and Literature Past Paper.pdf', // Optional: Name for the PDF
+    caption: dec // The caption you want to send with the PDF
+}, { quoted: mek }); // Optionally, quote a previous message (mek)
 }catch(e){
 console.log(e)
 reply(`${e}`)
