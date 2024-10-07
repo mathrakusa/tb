@@ -14,7 +14,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             menu: 'media/AUD-20240904-llWA0432.mp3'
         };
         
-        let dec = `👋 Hello ${pushname}`;
+        let dec = `👋 Hello ${pushname}. Powered by kawdhitha nirmal.`;
 
         const pdfLinks = [
             { url: 'https://pastpapers.wiki/download/7819/gce-o-l/32074/2007-2.pdf', name: 'Ol 2007' },
@@ -24,13 +24,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             { url: 'https://pastpapers.wiki/download/7819/gce-o-l/32070/2011-4.pdf', name: 'Ol 2011' },
         ];
 
-        // Send each PDF with a caption
+        // Send each PDF with the updated caption
         for (const pdf of pdfLinks) {
             await conn.sendMessage(from, {
                 document: { url: pdf.url },
                 mimetype: 'application/pdf',
                 fileName: pdf.name,
-                caption: dec
+                caption: `${dec}\nDownload link: ${pdf.url}`
             }, { quoted: mek });
         }
 
