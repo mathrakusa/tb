@@ -31,7 +31,7 @@ cmd({
                 document: { url: pdf.url },
                 mimetype: 'application/pdf',
                 fileName: pdf.name,
-                caption: `${dec}\n${pdf.caption}\n\n> ᴅᴏᴡɴʟᴏᴅᴇ ꜰʀᴏᴍᴇ : ${pdf.url}😎`
+                caption: `${dec}\n${pdf.caption}\n> ᴅᴏᴡɴʟᴏᴅᴇ ꜰʀᴏᴍᴇ : ${pdf.url}😎`
             }, { quoted: mek });
         }
 
