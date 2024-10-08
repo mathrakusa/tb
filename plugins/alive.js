@@ -15,21 +15,17 @@ const voice = {
 }
 let des = `*👋 Hello ${pushname}*
 
-*╔╭────────────╮╕*
-*╭│I'm Alive Now👾  │─◎◎▷*
-*╘╰────────────╯╜*
-*│A QUEEN-KYLIE-MD │Whatsapp Bot Based │Many │Services With A │RealTime* *Automated │Consversational* *││Experience, Enjoy💫.*
-*| So,I Think This Bots Are Useful To You.📍*
-*│*
-*│Type .menu To Get Bot User*
-*│Menu💫*
-*╰───────────────◎◎▷*
- *➣ ʏᴏᴜᴛᴜʙᴇ⚡*= https://www.youtube.com/@Sahas_Tech
-
-*➣ ᴡʜᴀᴛꜱᴀᴘᴘ ᴄʜᴀɴɴᴇʟ⚡* = https://whatsapp.com/channel/0029VaiTjMlK5cDLek3bB533
-
-*©Qᴜᴇᴇɴ ᴋʏʟɪᴇ-ᴍᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜッ*`
-return await conn.sendMessage(from,{image: {url: `https://telegra.ph/file/5f450004250b52156b75c.jpg`},caption: des},{quoted: mek})
+╭─────────────━┈⊷
+│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *📝ᴘᴀꜱᴛ ᴘᴀᴘᴇʀ 📝*
+│📍 ᴠᴇʀꜱɪᴏɴ: 1
+│👨‍💻 ᴏᴡɴᴇʀ : *ᴋᴀᴡᴅɪᴛʜᴀ ɴɪʀᴍᴀʟ*      
+│👤 ɴᴜᴍʙᴇʀ: 947297877501
+│📡 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
+│🛡 ᴍᴏᴅᴇ: *${mode}*
+│💫 ᴄʀᴇᴀᴛᴇʀ: *ᴋᴀᴡᴅɪᴛʜᴀ ɴɪʀᴍᴀʟ*
+╰─────────────━┈⊷ 
+> Powered by ©Kawdhitha Nirmal`
+return await conn.sendMessage(from,{image: {url: `https://i.ibb.co/R4J8J24/Business-Social-Media-Banner-02.png`},caption: des},{quoted: mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
