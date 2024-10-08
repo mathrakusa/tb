@@ -1,7 +1,7 @@
 const {cmd , commands} = require('../command')
 
 cmd({
-    pattern: "kylie",
+    pattern: "prokects",
     desc: "wallpaper the bot",
     category: "main",
     react: "☠",
@@ -11,11 +11,11 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let dec = `❮❮ MY KYLIE WALLPAPER 👾💗 ❯❯`
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/eed77eda52d1b6c5b7f7d.jpg`},caption:dec},{quoted:mek});
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/9c65bd8725a13d45eb055.jpg`},caption:dec},{quoted:mek});
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/95c29c97cb944b6dea36e.jpg`},caption:dec},{quoted:mek});
-await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/12e26034900ec43a876d6.jpg`},caption:dec},{quoted:mek});
+let dec = `❮❮ MY Projects 👾💗 ❯❯`
+await conn.sendMessage(from,{image:{url: `https://i.ibb.co/ZLsdW2P/20241008-150032.png`},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: `https://i.ibb.co/NnGRGxn/Business-Social-Media-Banner-02.png`},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: `https://i.ibb.co/fSwQNq5/helacinema.png`},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: `https://i.ibb.co/BgScvY3/th-2.jpg`},caption:dec},{quoted:mek});
 
 }catch(e){
 console.log(e)
