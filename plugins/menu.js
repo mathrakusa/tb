@@ -11,8 +11,8 @@ cmd({
         const voice = {
             menu: 'media/AUD-20240904-llWA0432.mp3'
         };
-
-        const dec = `👋 Hello ${pushname}. Powered by Kawdhitha Nirmal.`;
+        
+        let dec = `👋 Hello ${pushname}. Powered by Kawdhitha Nirmal.`;
 
         const pdfLinks = [
             { url: 'https://pastpapers.wiki/download/7819/gce-o-l/32074/2007-2.pdf', name: 'ᴏʟ ꜱᴄɪᴇɴᴄᴇ ᴘᴀᴘᴇʀ 2007', caption: '*මෙම බොට් ගැන අදහස් පලකිරීමට +94729787750 🙃👍*' },
@@ -22,16 +22,13 @@ cmd({
             { url: 'https://pastpapers.wiki/download/7819/gce-o-l/32070/2011-4.pdf', name: 'ᴏʟ ꜱᴄɪᴇɴᴄᴇ ᴘᴀᴘᴇʀ 2010', caption: '*මෙම බොට් ගැන අදහස් පලකිරීමට +94729787750 🙃👍*' },
         ];
 
-        // React with a checkmark emoji
-        await conn.react(mek.key, "✅", from);
-
         // Send each PDF with the updated caption
         for (const pdf of pdfLinks) {
             await conn.sendMessage(from, {
                 document: { url: pdf.url },
                 mimetype: 'application/pdf',
                 fileName: pdf.name,
-                caption: `${dec}\n${pdf.caption}\n> ᴅᴏᴡɴʟᴏᴅᴇ ꜰʀᴏᴍᴇ : ${pdf.url}😎`
+                caption: `${dec}\n${pdf.caption}\n> ᴅᴏᴡɴʟᴏᴅᴇ ꜰʀᴏᴍᴇ: ${pdf.url}😎`
             }, { quoted: mek });
         }
 
