@@ -10,6 +10,6 @@ ALIVE_IMG: process.env.ALIVE_IMG || "https://telegra.ph/file/198a322e8cc0f2bd6cb
 ALIVE_MSG: process.env.ALIVE_IMG || "🤖🔰 Hi QUEEN-KYLIE-MD Is Online Now 💻\n*💻 Owner* - QUEEN-KYLIE-MD\n\n*💻 Owner Number* -94765527900",
 SUDO_NB: process.env.SUDO_NB || "94718913389",
 AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
-MODE: process.env.MODE || "privet",
+MODE: process.env.MODE || "public",
 AUTO_VOICE:"false"
 };
