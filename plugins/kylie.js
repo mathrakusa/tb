@@ -1,5 +1,8 @@
 const { cmd, commands } = require('../command');
 
+// Store polls in memory (you might want to use a more persistent storage in a real application)
+let polls = {};
+
 cmd({
     pattern: "poll",
     desc: "Create an anonymous poll",
@@ -12,7 +15,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
         const question = "ඉර මොන පාටද?";
         const options = [
-            "1. කහ",
+            "1. කහ", // Correct answer
             "2. රතු",
             "3. නිල්"
         ];
@@ -22,9 +25,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         let pollMessage = `📊 **Poll**\n\n**Question:** ${question}\n\n**Options:**\n${options.join("\n")}`;
         await conn.sendMessage(from, { text: pollMessage }, { quoted: mek });
 
-        // Store the poll data, e.g., in a database or an in-memory object
-        // For example:
-        // polls[from] = { question, options, correctAnswer, votes: {} };
+        // Initialize the poll data for this group or chat
+        polls[from] = { question, options, correctAnswer, votes: {} };
 
     } catch (e) {
         console.log(e);
@@ -44,26 +46,22 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args }) => {
     try {
         const userVote = parseInt(args[0]); // Get the user's vote (1, 2, or 3)
-        
-        // Validate the vote
-        if (![1, 2, 3].includes(userVote)) {
-            return conn.sendMessage(from, { text: "Invalid option! Please vote with 1, 2, or 3." }, { quoted: mek });
+
+        // Ensure that the poll exists for the current chat
+        if (!polls[from]) {
+            return conn.sendMessage(from, { text: "No active poll found!" }, { quoted: mek });
         }
 
-        // Here, you would typically check if the user has already voted
-        // For example:
-        // if (polls[from].votes[sender]) {
-        //     return conn.sendMessage(from, { text: "You've already voted!" }, { quoted: mek });
-        // }
+        // Check if the user voted for the correct answer
+        if (userVote === polls[from].correctAnswer) {
+            // Store the user's vote
+            polls[from].votes[sender] = userVote; // Store user vote
 
-        // Store the user's vote
-        // polls[from].votes[sender] = userVote;
-
-        // Check if the answer is correct
-        if (userVote === correctAnswer) {
             conn.sendMessage(from, { text: "✅ Your vote is recorded, and it's correct!" }, { quoted: mek });
         } else {
-            conn.sendMessage(from, { text: "✅ Your vote is recorded!" }, { quoted: mek });
+            conn.sendMessage(from, { text: "❌ Your vote is incorrect! Please vote for the correct answer." }, { quoted: mek });
+            // Optionally add a reaction for the incorrect answer
+            await conn.sendReaction(from, "❌", mek.key.id); // Assuming the library supports this
         }
 
     } catch (e) {
