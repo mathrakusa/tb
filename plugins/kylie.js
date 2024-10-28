@@ -23,14 +23,18 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send the poll question and options
         let pollMessage = `📊 **Poll**\n\n**Question:** ${question}\n\n**Options:**\n${options.join("\n")}`;
-        await conn.sendMessage(from, { text: pollMessage }, { quoted: mek });
+        const messageResponse = await conn.sendMessage(from, { text: pollMessage }, { quoted: mek });
+
+        // Debugging: Check if the message was sent successfully
+        console.log("Poll message sent:", messageResponse);
 
         // Initialize the poll data for this group or chat
         polls[from] = { question, options, correctAnswer, votes: {} };
+        console.log(`Poll initialized for ${from}:`, polls[from]); // Debugging the poll initialization
 
     } catch (e) {
-        console.log(e);
-        reply(`${e}`);
+        console.log("Error creating poll:", e); // Improved error logging
+        conn.sendMessage(from, { text: `Error creating poll: ${e.message}` }, { quoted: mek });
     }
 });
 
@@ -65,7 +69,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args }) => {
         }
 
     } catch (e) {
-        console.log(e);
-        reply(`${e}`);
+        console.log("Error submitting vote:", e); // Improved error logging
+        conn.sendMessage(from, { text: `Error submitting vote: ${e.message}` }, { quoted: mek });
     }
 });
