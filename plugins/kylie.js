@@ -13,7 +13,7 @@ cmd({
 
     // Send poll message
     await conn.sendMessage(from, {
-        text: `📊 **Poll**\n\n**Question:** ${question}\n\n**Options:**\n${options.join('\n')}`
+        text: `📊 *Poll*\n\n*Question:* ${question}\n\n*Options:*\n${options.join('\n')}`
     });
 
     // Listen for user responses
