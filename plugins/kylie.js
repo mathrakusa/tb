@@ -1,69 +1,24 @@
-const { cmd, commands } = require('../command');
+const {cmd , commands} = require('../command')
 
-cmd(
-    {
-        pattern: "test",
-        desc: "Displays wallpaper projects of the bot",
-        category: "main",
-        react: "☠",
-        filename: __filename
-    },
-    async (conn, mek, m, {
-        from,
-        quoted,
-        body,
-        isCmd,
-        command,
-        args,
-        q,
-        isGroup,
-        sender,
-        senderNumber,
-        botNumber2,
-        botNumber,
-        pushname,
-        isMe,
-        isOwner,
-        groupMetadata,
-        groupName,
-        participants,
-        groupAdmins,
-        isBotAdmins,
-        isAdmins,
-        reply
-    }) => {
-        try {
-            let dec = `❮❮ MY Projects 👾💗 ❯❯`;
+cmd({
+    pattern: "prokects",
+    desc: "wallpaper the bot",
+    category: "main",
+    react: "☠",
+    filename: __filename
+},
 
-            const images = [
-                "https://i.ibb.co/ZLsdW2P/20241008-150032.png",
-                "https://i.ibb.co/NnGRGxn/Business-Social-Media-Banner-02.png",
-                "https://i.ibb.co/fSwQNq5/helacinema.png",
-                "https://i.ibb.co/BgScvY3/th-2.jpg"
-            ];
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
 
-            for (const imageUrl of images) {
-                const buttons = [
-                    {
-                        buttonId: 'download_image',
-                        buttonText: { displayText: "Download" },
-                        type: 1
-                    }
-                ];
+let dec = ❮❮ MY Projects 👾💗 ❯❯
+await conn.sendMessage(from,{image:{url: https://i.ibb.co/ZLsdW2P/20241008-150032.png},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: https://i.ibb.co/NnGRGxn/Business-Social-Media-Banner-02.png},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: https://i.ibb.co/fSwQNq5/helacinema.png},caption:dec},{quoted:mek});
+await conn.sendMessage(from,{image:{url: https://i.ibb.co/BgScvY3/th-2.jpg},caption:dec},{quoted:mek});
 
-                const buttonMessage = {
-                    image: { url: imageUrl },
-                    caption: dec,
-                    footer: "Select 'Download' to save the image",
-                    buttons: buttons,
-                    headerType: 4
-                };
-
-                await conn.sendMessage(from, buttonMessage, { quoted: mek });
-            }
-        } catch (e) {
-            console.log(e);
-            reply(`${e}`);
-        }
-    }
-);
+}catch(e){
+console.log(e)
+reply(${e})
+}
+})  Send button for downlode image
