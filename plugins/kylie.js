@@ -2,7 +2,7 @@ const { cmd, commands } = require('../command');
 
 cmd(
     {
-        pattern: "prokects",
+        pattern: "test",
         desc: "Displays wallpaper projects of the bot",
         category: "main",
         react: "☠",
