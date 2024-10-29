@@ -15,7 +15,7 @@ cmd({
         const dec = `👋 Hello ${pushname}`;
 
         const pdfLinks = [
-            { url: 'https://pastpapers.wiki/download/7816/grade-11/40863/3.pdf', name: 'බුදු කුරු දම් පුරා', caption: '*💪දිනලම ඉවර කරමු🔥 9A*' },
+            { url: 'https://pastpapers.wiki/download/7816/grade-11/40863/3.pdf', name: 'බුදු කුරු දම් පුරා🙏', caption: '*💪දිනලම ඉවර කරමු🔥 9A*' },
         ];
         // Send each PDF with the updated caption
         for (const pdf of pdfLinks) {
