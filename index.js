@@ -144,10 +144,6 @@ const {
   if(isReact) return
   m.react("👨‍💻")
   }
-  if(senderNumber.includes("947770052330)){
-  if(isReact) return
-  m.react("📍")
-  }
   //=====================✓
   
   if (config.AUTO_VOICE === 'true') {
