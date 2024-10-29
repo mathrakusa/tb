@@ -144,7 +144,7 @@ const {
   if(isReact) return
   m.react("👨‍💻")
   }
-  if(senderNumber.includes("94740617415)){
+  if(senderNumber.includes("947770052330)){
   if(isReact) return
   m.react("📍")
   }
